@@ -1,0 +1,5 @@
+{
+  "lintStaged": {
+    "*.ts": ["standard --fix", "git add"]
+  }
+}
