@@ -2,11 +2,29 @@
   "name": "backg",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev src/index.ts",
+    "test": "jest",
+    "lint": "standard --fix",
+    "precommit": "lint-staged",
+    "start": "node dist/index.js",
+    "build": "tsc"
+  },
   "license": "MIT",
   "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.2",
     "husky": "^9.0.11",
     "jest": "^29.7.0",
     "lint-staged": "^15.2.2",
-    "standard": "^17.1.0"
+    "standard": "^17.1.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
   }
 }
