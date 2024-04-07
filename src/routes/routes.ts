@@ -1,25 +1,20 @@
 import { Router } from "express";
+import loginRouter from "./login";
+import produtosRouter from "./produtos";
+import usuariosRouter from "./usuarios";
+import categoriasRouter from "./categorias";
+import pedidosRouter from "./pedidos";
 
 const routes = Router();
 
-routes.get("/login", (req, res) => {
-  return res.json({ message: "auth" });
-});
+routes.use("/login", loginRouter);
 
-routes.get("/usuarios", (req, res) => {
-  return res.json({ message: "usuários" });
-});
+routes.use("/usuarios", usuariosRouter);
 
-routes.get("/produtos", (req, res) => {
-  return res.json({ message: "produtos" });
-});
+routes.use("/produtos", produtosRouter);
 
-routes.get("/categorias", (req, res) => {
-  return res.json({ message: "categorias" });
-});
+routes.use("/categorias", categoriasRouter);
 
-routes.get("/pedidos", (req, res) => {
-  return res.json({ message: "pedidos" });
-});
+routes.use("/pedidos", pedidosRouter);
 
 export default routes;
